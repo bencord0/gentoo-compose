@@ -1,0 +1,12 @@
+gentoo:
+    image: gentoo/stage3-amd64
+    volumes:
+        - ./data:/data
+    volumes_from:
+        - portage
+    ports:
+        - "8000"
+    #privileged: true
+
+portage:
+    image: gentoo/portage
