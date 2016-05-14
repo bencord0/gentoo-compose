@@ -5,7 +5,7 @@ help:
 	# docker-clean - clean up old containers
 
 shell:
-	docker-compose run --rm $(NAME) /bin/bash
+	docker-compose run --service-ports --rm $(NAME) /bin/bash
 
 docker-clean-containers:
 	@echo Removing all containers
